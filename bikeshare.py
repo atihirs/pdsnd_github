@@ -18,8 +18,8 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington)
     while True:
-        city_input = input("Which city do you want to analyze? Choose from chicago, new york city, or washington: ")
-        city = city_input.lower()
+        city = input("Which city do you want to analyze? Choose from chicago, new york city, or washington: ")
+        city = city.lower()
         if city not in ('chicago', 'new york city', 'washington'):
             print("This is not a valid choice. Please try entering the city again.")
         else:
@@ -27,16 +27,16 @@ def get_filters():
 
     # get user input for month (all, january, february, ... , december)
     while True:
-        month_input = input("Which month do you want to analyze? If you want all months, enter ALL: ")
-        month = month_input.lower()
+        month = input("Which month do you want to analyze? If you want all months, enter ALL: ")
+        month = month.lower()
         if month not in ('all', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'):
             print("This is not a valid choice. Please try entering the month filter again.")
         else:
             break
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day_input = input("Which day you want to analyze? If you want all days, enter ALL: ")
-        day = day_input.lower()
+        day = input("Which day you want to analyze? If you want all days, enter ALL: ")
+        day = day.lower()
         if day not in ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
             print("This is not a valid choice. Please try entering the day filter again.")
         else:
@@ -173,13 +173,13 @@ def user_stats(df, city):
 
 def raw_data(city):
     # create new copy of dataframe from city raw data
-    dr = pd.read_csv(CITY_DATA[city])
+    city_data_copy = pd.read_csv(CITY_DATA[city])
     row_index = 0
     # return 5 rows of raw data for each input
     while True:
         find_rows = input('\nWould you like to see raw data? If so, enter yes. Otherwise, enter anything else.\n')
         if find_rows.lower() == 'yes':
-            row_view = pd.DataFrame(dr, index = range(row_index, row_index+5))
+            row_view = pd.DataFrame(city_data_copy, index = range(row_index, row_index+5))
             print(row_view)
             row_index += 5
         else:
