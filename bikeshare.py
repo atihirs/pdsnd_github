@@ -187,9 +187,11 @@ def raw_data(city):
 
 def main():
     while True:
+        # use the getfilters() function to create input variables: city, month, day
         city, month, day = get_filters()
+        # use the input variables to create the desired frame of the raw data
         df = load_data(city, month, day)
-
+        # pass the frame as arguments for each stats function
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
