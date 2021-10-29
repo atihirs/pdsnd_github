@@ -173,13 +173,13 @@ def user_stats(df, city):
 
 def raw_data(city):
     # create new copy of dataframe from city raw data
-    dr = pd.read_csv(CITY_DATA[city])
+    city_data_copy = pd.read_csv(CITY_DATA[city])
     row_index = 0
     # return 5 rows of raw data for each input
     while True:
         find_rows = input('\nIf you would like to see raw data, enter yes. Otherwise, enter anything else.\n')
         if find_rows.lower() == 'yes':
-            row_view = pd.DataFrame(dr, index = range(row_index, row_index+5))
+            row_view = pd.DataFrame(city_data_copy, index = range(row_index, row_index+5))
             print(row_view)
             row_index += 5
         else:
