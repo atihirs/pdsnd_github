@@ -177,7 +177,7 @@ def raw_data(city):
     row_index = 0
     # return 5 rows of raw data for each input
     while True:
-        find_rows = input('\nIf you would like to see raw data, enter yes. Otherwise, enter anything else.\n')
+        find_rows = input('\nWould you like to see raw data? If so, enter yes. Otherwise, enter anything else.\n')
         if find_rows.lower() == 'yes':
             row_view = pd.DataFrame(dr, index = range(row_index, row_index+5))
             print(row_view)
@@ -198,7 +198,7 @@ def main():
         user_stats(df,city)
         raw_data(city)
 
-        restart = input('\nIf you would like to restart, enter yes. Otherwise, enter anything else.\n')
+        restart = input('\nWould you like to restart? If so, enter yes. Otherwise, enter anything else.\n')
         if restart.lower() != 'yes':
             break
 
