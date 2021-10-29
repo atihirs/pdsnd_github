@@ -7,10 +7,10 @@ This project was created on October 29, 2021.
 Udacity Git Commands Project
 
 ### Description
-Describe what your project is about and what it does
+This project intends to demonstrate understanding of Git collaboration concepts
 
 ### Files used
-Include the files used
+Project includes a Python program file that provides descriptive stats on city bike rentals
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
