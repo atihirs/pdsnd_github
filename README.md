@@ -13,5 +13,5 @@ This project intends to demonstrate understanding of Git collaboration concepts
 Project includes a Python program file that provides descriptive stats on city bike rentals
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The Udacity course-collaboration-travel-plans was a helpful example to emulate
 
